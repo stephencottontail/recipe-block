@@ -1,0 +1,6 @@
+@import "variables.css";
+
+.sc-recipe-front {
+	background-color: var( --background-color );
+}
+

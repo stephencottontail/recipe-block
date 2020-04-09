@@ -1,0 +1,6 @@
+@import "variables.css";
+
+.sc-recipe-editor {
+	background-color: var( --background-color );
+}
+
