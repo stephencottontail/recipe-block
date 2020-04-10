@@ -1,6 +1,6 @@
-@import "variables.css";
+@import "partials/variables.css";
 
 .sc-recipe-front {
 	background-color: var( --background-color );
+	color: var( --text-color );
 }
-
