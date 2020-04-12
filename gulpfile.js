@@ -1,12 +1,11 @@
 var gulp = require( 'gulp' ),
-	babel = require( 'gulp-babel' ),
-	postCSS = require( 'gulp-postcss' );
+	postCSS = require( 'gulp-postcss' ),
+	webpack = require( 'webpack' ),
+	stream = require( 'webpack-stream' )
 
 gulp.task( 'scripts', function() {
-	return gulp.src( './src/*.js' )
-		.pipe( babel( {
-			presets: [ '@wordpress/default' ]
-		} ) )
+	return gulp.src( './src/block.js' )
+		.pipe( stream( require( './webpack.config.js' ), webpack ) )
 		.pipe( gulp.dest( './dist' ) )
 } );
 
