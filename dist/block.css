@@ -1,4 +1,35 @@
-.sc-recipe-front {
-	background-color: #f9f9f9;
+.wp-block-sc-recipe {
 	color: #0d0d0d;
+	font-family: "Lora"
+,
+serif;
+	padding: 0;
+}
+
+.wp-block-sc-recipe > * + * {
+	margin-top: calc( 16px * 1.5);
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__content {
+	background-color: #f9f9f9;
+	color: inherit;
+	padding: calc( calc( 16px * 1.5) / 2 );
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__content > * + * {
+	margin-top: calc( calc( 16px * 1.5) / 2 );
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__content ul,
+.wp-block-sc-recipe .wp-block-sc-recipe__content ol {
+	margin: 0 0 0 calc( 16px * 1.5);
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__title {
+	color: #734455;
+	font-family: "Poiret One"
+,
+serif;
+	line-height: 1.2;
+	margin: 0;
 }

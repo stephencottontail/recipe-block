@@ -1,7 +1,73 @@
 @import "partials/variables.css";
 
-.sc-recipe-editor {
-	background-color: var( --background-color );
-	color: var( --text-color );
+* {
+	box-sizing: border-box;
 }
 
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.wp-block-sc-recipe {
+	position: relative;
+	color: var( --text-color );
+	font-family: var( --body-font );
+	padding: 0;
+	box-shadow: 1px 1px 4px var( --gray-400 );
+}
+
+.wp-block-sc-recipe::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0.35;
+	z-index: 0;
+	background:
+		linear-gradient( 81deg, transparent 86.3%, var( --pink-100 ) 86.3%, var( --pink-100 ) ),
+		linear-gradient( 72deg, transparent 75.4%, var( --pink-200 ) 75.4%, var( --pink-200 ) ),
+		linear-gradient( 63deg, transparent 66.2%, var( --pink-100 ) 66.2%, var( --pink-100 ) ),
+		linear-gradient( 54deg, transparent 57.8%, var( --pink-200 ) 57.8%, var( --pink-200 ) ),
+		linear-gradient( 45deg, transparent 49.9%, var( --pink-100 ) 49.9%, var( --pink-100 ) ),
+		linear-gradient( 36deg, transparent 41.9%, var( --pink-200 ) 41.9%, var( --pink-200 ) ),
+		linear-gradient( 27deg, transparent 33.6%, var( --pink-100 ) 33.6%, var( --pink-100 ) ),
+		linear-gradient( 18deg, transparent 24.3%, var( --pink-200 ) 24.3%, var( --pink-200 ) ),
+		linear-gradient( 9deg, transparent 13.6%, var( --pink-100 ) 13.6%, var( --pink-100 ) );
+	background-size: cover;
+}
+
+.wp-block-sc-recipe > * + * {
+	margin-top: var( --base-spacing );
+}
+
+.wp-block-sc-recipe ul,
+.wp-block-sc-recipe ol {
+	margin: 0 0 0 var( --base-spacing );
+}
+
+.wp-block-sc-recipe p {
+	margin-top: 0;
+	margin-bottom: var( --base-spacing );
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__content {
+	background-color: var( --gray-100 );
+	color: inherit;
+	opacity: 0.99;
+	z-index: 5;
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__content > * + * {
+	margin-top: calc( var( --base-spacing ) / 2 );
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__title {
+	background-color: transparent;
+	color: var( --pink-600 );
+	font-family: var( --header-font );
+	margin: calc( var( --base-spacing ) / 2 );
+	z-index: 5;
+}

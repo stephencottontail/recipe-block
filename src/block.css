@@ -1,6 +1,33 @@
 @import "partials/variables.css";
 
-.sc-recipe-front {
-	background-color: var( --background-color );
+.wp-block-sc-recipe {
 	color: var( --text-color );
+	font-family: var( --body-font );
+	padding: 0;
+}
+
+.wp-block-sc-recipe > * + * {
+	margin-top: var( --base-spacing );
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__content {
+	background-color: var( --gray-100 );
+	color: inherit;
+	padding: calc( var( --base-spacing ) / 2 );
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__content > * + * {
+	margin-top: calc( var( --base-spacing ) / 2 );
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__content ul,
+.wp-block-sc-recipe .wp-block-sc-recipe__content ol {
+	margin: 0 0 0 var( --base-spacing );
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__title {
+	color: var( --pink-600 );
+	font-family: var( --header-font );
+	line-height: 1.2;
+	margin: 0;
 }

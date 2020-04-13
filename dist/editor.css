@@ -1,5 +1,75 @@
-.sc-recipe-editor {
-	background-color: #f9f9f9;
-	color: #0d0d0d;
+* {
+	box-sizing: border-box;
 }
 
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.wp-block-sc-recipe {
+	position: relative;
+	color: #0d0d0d;
+	font-family: "Lora"
+,
+serif;
+	padding: 0;
+	box-shadow: 1px 1px 4px #595959;
+}
+
+.wp-block-sc-recipe::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0.35;
+	z-index: 0;
+	background:
+		linear-gradient( 81deg, transparent 86.3%, #fcd2e1 86.3%, #fcd2e1),
+		linear-gradient( 72deg, transparent 75.4%, #f2b3ca 75.4%, #f2b3ca),
+		linear-gradient( 63deg, transparent 66.2%, #fcd2e1 66.2%, #fcd2e1),
+		linear-gradient( 54deg, transparent 57.8%, #f2b3ca 57.8%, #f2b3ca),
+		linear-gradient( 45deg, transparent 49.9%, #fcd2e1 49.9%, #fcd2e1),
+		linear-gradient( 36deg, transparent 41.9%, #f2b3ca 41.9%, #f2b3ca),
+		linear-gradient( 27deg, transparent 33.6%, #fcd2e1 33.6%, #fcd2e1),
+		linear-gradient( 18deg, transparent 24.3%, #f2b3ca 24.3%, #f2b3ca),
+		linear-gradient( 9deg, transparent 13.6%, #fcd2e1 13.6%, #fcd2e1);
+	background-size: cover;
+}
+
+.wp-block-sc-recipe > * + * {
+	margin-top: calc( 16px * 1.5);
+}
+
+.wp-block-sc-recipe ul,
+.wp-block-sc-recipe ol {
+	margin: 0 0 0 calc( 16px * 1.5);
+}
+
+.wp-block-sc-recipe p {
+	margin-top: 0;
+	margin-bottom: calc( 16px * 1.5);
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__content {
+	background-color: #f9f9f9;
+	color: inherit;
+	opacity: 0.99;
+	z-index: 5;
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__content > * + * {
+	margin-top: calc( calc( 16px * 1.5) / 2 );
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__title {
+	background-color: transparent;
+	color: #734455;
+	font-family: "Poiret One"
+,
+serif;
+	margin: calc( calc( 16px * 1.5) / 2 );
+	z-index: 5;
+}

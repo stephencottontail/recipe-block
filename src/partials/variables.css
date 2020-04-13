@@ -18,7 +18,7 @@
 
 
 	--base-font-size: 16px;
-	--base-line-height: 1.5px;
+	--base-line-height: 1.5;
 	--base-spacing: calc( var( --base-font-size ) * var( --base-line-height ) );
 
 
