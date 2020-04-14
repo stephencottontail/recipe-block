@@ -71,3 +71,62 @@
 	margin: calc( var( --base-spacing ) / 2 );
 	z-index: 5;
 }
+
+.wp-block-sc-recipe .wp-block-sc-recipe__blathering-wrapper {
+	position: relative;
+	height: 100px;
+	max-height: 100px;
+	overflow: hidden;
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__blathering-wrapper .overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 25%;
+	width: 100%;
+	background: linear-gradient( to bottom, white, var( --gray-100 ) );
+	z-index: 10;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__blathering {
+	height: 100px;
+	max-height: 100px;
+	background-color: #fff;
+	overflow: hidden;
+	padding: calc( var( --base-spacing ) / 2 );
+	resize: none;
+}
+
+.wp-block-sc-recipe svg {
+	height: 16px;
+	width: 16px;
+	stroke: var( --gray-500 );
+	fill: var( --gray-500 );
+	transform: rotate( 0 );
+	transition: transform 300ms ease;
+}
+
+.blathering-toggled .wp-block-sc-recipe__blathering-wrapper {
+	height: auto;
+	max-height: initial;
+}
+
+.blathering-toggled .wp-block-sc-recipe__blathering-wrapper .overlay {
+	background: transparent;
+	height: 50px;
+}
+
+.blathering-toggled .wp-block-sc-recipe__blathering {
+	height: auto;
+	max-height: initial;
+	padding-bottom: 50px;
+	resize: none;
+}
+
+.blathering-toggled svg {
+	transform: rotate( 180deg );
+}

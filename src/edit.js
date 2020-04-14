@@ -1,9 +1,22 @@
 import { RichText } from '@wordpress/blockEditor'
 import { Component, createElement as el } from '@wordpress/element'
+import classnames from 'classnames'
 
 class Edit extends Component {
 	constructor( props ) {
 		super( props )
+
+		this.state = {
+			isBlatheringToggled: false
+		}
+
+		this.toggleBlathering = this.toggleBlathering.bind( this );
+	}
+
+	toggleBlathering() {
+		this.setState( state => ( {
+			isBlatheringToggled: ! state.isBlatheringToggled
+		} ) )
 	}
 
 	render() {
@@ -13,7 +26,7 @@ class Edit extends Component {
 			el(
 				'div',
 				{
-					className: className
+					className: ( this.state.isBlatheringToggled ? classnames( className, 'blathering-toggled' ) : className )
 				},
 				el(
 					RichText,
@@ -34,17 +47,42 @@ class Edit extends Component {
 						className: `${className}__content`,
 					},
 					el(
-						RichText,
+						'div',
 						{
-							className: `${className}__blathering`,
-							value: attributes.blathering,
-							placeholder: 'Write your pretentious irrelevant blathering about this recipe...',
-							keepPlaceholderOnFocus: true,
-							multiline: true,
-							onChange: ( content ) => {
-								setAttributes( { blathering: content } )
+							className: `${className}__blathering-wrapper`
+						},
+						el(
+							'div',
+							{
+								className: 'overlay',
+								onClick: this.toggleBlathering
+							},
+							el(
+								'svg',
+								{
+									viewBox: '0 0 100 100'
+								},
+								el(
+									'polygon',
+									{
+										points: '0 0, 100 0, 50 75'
+									}
+								)
+							)
+						),
+						el(
+							RichText,
+							{
+								className: `${className}__blathering`,
+								value: attributes.blathering,
+								placeholder: 'Write your pretentious irrelevant blathering about this recipe...',
+								keepPlaceholderOnFocus: true,
+								multiline: true,
+								onChange: ( content ) => {
+									setAttributes( { blathering: content } )
+								}
 							}
-						}
+						)
 					),
 					el(
 						RichText,
