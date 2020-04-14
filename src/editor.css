@@ -9,7 +9,7 @@
 	box-sizing: border-box;
 }
 
-.wp-block-sc-recipe {
+.editor-styles-wrapper .wp-block-sc-recipe {
 	position: relative;
 	color: var( --text-color );
 	font-family: var( --body-font );
@@ -17,7 +17,7 @@
 	box-shadow: 1px 1px 4px var( --gray-400 );
 }
 
-.wp-block-sc-recipe::before {
+.editor-styles-wrapper .wp-block-sc-recipe::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -39,32 +39,32 @@
 	background-size: cover;
 }
 
-.wp-block-sc-recipe > * + * {
+.editor-styles-wrapper .wp-block-sc-recipe > * + * {
 	margin-top: var( --base-spacing );
 }
 
-.wp-block-sc-recipe ul,
-.wp-block-sc-recipe ol {
+.editor-styles-wrapper .wp-block-sc-recipe ul,
+.editor-styles-wrapper .wp-block-sc-recipe ol {
 	margin: 0 0 0 var( --base-spacing );
 }
 
-.wp-block-sc-recipe p {
+.editor-styles-wrapper .wp-block-sc-recipe p {
 	margin-top: 0;
 	margin-bottom: var( --base-spacing );
 }
 
-.wp-block-sc-recipe .wp-block-sc-recipe__content {
+.editor-styles-wrapper .wp-block-sc-recipe__content {
 	background-color: var( --gray-100 );
 	color: inherit;
 	opacity: 0.99;
 	z-index: 5;
 }
 
-.wp-block-sc-recipe .wp-block-sc-recipe__content > * + * {
+.editor-styles-wrapper .wp-block-sc-recipe__content > * + * {
 	margin-top: calc( var( --base-spacing ) / 2 );
 }
 
-.wp-block-sc-recipe .wp-block-sc-recipe__title {
+.editor-styles-wrapper .wp-block-sc-recipe__title {
 	background-color: transparent;
 	color: var( --pink-600 );
 	font-family: var( --header-font );
@@ -72,14 +72,14 @@
 	z-index: 5;
 }
 
-.wp-block-sc-recipe .wp-block-sc-recipe__blathering-wrapper {
+.editor-styles-wrapper .wp-block-sc-recipe__blathering-wrapper {
 	position: relative;
 	height: 100px;
 	max-height: 100px;
 	overflow: hidden;
 }
 
-.wp-block-sc-recipe .wp-block-sc-recipe__blathering-wrapper .overlay {
+.editor-styles-wrapper .wp-block-sc-recipe__blathering-wrapper .overlay {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -92,7 +92,7 @@
 	justify-content: center;
 }
 
-.wp-block-sc-recipe .wp-block-sc-recipe__blathering {
+.editor-styles-wrapper .wp-block-sc-recipe__blathering {
 	height: 100px;
 	max-height: 100px;
 	background-color: #fff;
@@ -101,7 +101,7 @@
 	resize: none;
 }
 
-.wp-block-sc-recipe svg {
+.editor-styles-wrapper .wp-block-sc-recipe svg {
 	height: 16px;
 	width: 16px;
 	stroke: var( --gray-500 );

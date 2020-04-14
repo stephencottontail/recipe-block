@@ -7,7 +7,7 @@
 	box-sizing: border-box;
 }
 
-.wp-block-sc-recipe {
+.editor-styles-wrapper .wp-block-sc-recipe {
 	position: relative;
 	color: #0d0d0d;
 	font-family: "Lora"
@@ -17,7 +17,7 @@ serif;
 	box-shadow: 1px 1px 4px #595959;
 }
 
-.wp-block-sc-recipe::before {
+.editor-styles-wrapper .wp-block-sc-recipe::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -39,32 +39,32 @@ serif;
 	background-size: cover;
 }
 
-.wp-block-sc-recipe > * + * {
+.editor-styles-wrapper .wp-block-sc-recipe > * + * {
 	margin-top: calc( 16px * 1.5);
 }
 
-.wp-block-sc-recipe ul,
-.wp-block-sc-recipe ol {
+.editor-styles-wrapper .wp-block-sc-recipe ul,
+.editor-styles-wrapper .wp-block-sc-recipe ol {
 	margin: 0 0 0 calc( 16px * 1.5);
 }
 
-.wp-block-sc-recipe p {
+.editor-styles-wrapper .wp-block-sc-recipe p {
 	margin-top: 0;
 	margin-bottom: calc( 16px * 1.5);
 }
 
-.wp-block-sc-recipe .wp-block-sc-recipe__content {
+.editor-styles-wrapper .wp-block-sc-recipe__content {
 	background-color: #f9f9f9;
 	color: inherit;
 	opacity: 0.99;
 	z-index: 5;
 }
 
-.wp-block-sc-recipe .wp-block-sc-recipe__content > * + * {
+.editor-styles-wrapper .wp-block-sc-recipe__content > * + * {
 	margin-top: calc( calc( 16px * 1.5) / 2 );
 }
 
-.wp-block-sc-recipe .wp-block-sc-recipe__title {
+.editor-styles-wrapper .wp-block-sc-recipe__title {
 	background-color: transparent;
 	color: #734455;
 	font-family: "Poiret One"
@@ -74,14 +74,14 @@ serif;
 	z-index: 5;
 }
 
-.wp-block-sc-recipe .wp-block-sc-recipe__blathering-wrapper {
+.editor-styles-wrapper .wp-block-sc-recipe__blathering-wrapper {
 	position: relative;
 	height: 100px;
 	max-height: 100px;
 	overflow: hidden;
 }
 
-.wp-block-sc-recipe .wp-block-sc-recipe__blathering-wrapper .overlay {
+.editor-styles-wrapper .wp-block-sc-recipe__blathering-wrapper .overlay {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -94,7 +94,7 @@ serif;
 	justify-content: center;
 }
 
-.wp-block-sc-recipe .wp-block-sc-recipe__blathering {
+.editor-styles-wrapper .wp-block-sc-recipe__blathering {
 	height: 100px;
 	max-height: 100px;
 	background-color: #fff;
@@ -103,7 +103,7 @@ serif;
 	resize: none;
 }
 
-.wp-block-sc-recipe svg {
+.editor-styles-wrapper .wp-block-sc-recipe svg {
 	height: 16px;
 	width: 16px;
 	stroke: #0d0d0d;
