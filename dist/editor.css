@@ -129,6 +129,7 @@ serif;
 	resize: none;
 }
 
-.blathering-toggled svg {
+.editor-styles-wrapper .blathering-toggled svg {
 	transform: rotate( 180deg );
+	margin: 4px 0;
 }
