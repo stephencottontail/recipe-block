@@ -10,7 +10,7 @@ class Edit extends Component {
 			isBlatheringToggled: false
 		}
 
-		this.toggleBlathering = this.toggleBlathering.bind( this );
+		this.toggleBlathering = this.toggleBlathering.bind( this )
 	}
 
 	toggleBlathering() {

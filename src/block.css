@@ -1,9 +1,31 @@
 @import "partials/variables.css";
 
 .wp-block-sc-recipe {
+	position: relative;
 	color: var( --text-color );
 	font-family: var( --body-font );
 	padding: 0;
+}
+
+.wp-block-sc-recipe::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -5;
+	background:
+		linear-gradient( 81deg, transparent 86.3%, var( --pink-100 ) 86.3%, var( --pink-100 ) ),
+		linear-gradient( 72deg, transparent 75.4%, var( --pink-200 ) 75.4%, var( --pink-200 ) ),
+		linear-gradient( 63deg, transparent 66.2%, var( --pink-100 ) 66.2%, var( --pink-100 ) ),
+		linear-gradient( 54deg, transparent 57.8%, var( --pink-200 ) 57.8%, var( --pink-200 ) ),
+		linear-gradient( 45deg, transparent 49.9%, var( --pink-100 ) 49.9%, var( --pink-100 ) ),
+		linear-gradient( 36deg, transparent 41.9%, var( --pink-200 ) 41.9%, var( --pink-200 ) ),
+		linear-gradient( 27deg, transparent 33.6%, var( --pink-100 ) 33.6%, var( --pink-100 ) ),
+		linear-gradient( 18deg, transparent 24.3%, var( --pink-200 ) 24.3%, var( --pink-200 ) ),
+		linear-gradient( 9deg, transparent 13.6%, var( --pink-100 ) 13.6%, var( --pink-100 ) );
+	background-size: cover;
 }
 
 .wp-block-sc-recipe > * + * {
@@ -13,21 +35,73 @@
 .wp-block-sc-recipe .wp-block-sc-recipe__content {
 	background-color: var( --gray-100 );
 	color: inherit;
+	opacity: 0.99;
 	padding: calc( var( --base-spacing ) / 2 );
+	z-index: 5;
 }
 
 .wp-block-sc-recipe .wp-block-sc-recipe__content > * + * {
-	margin-top: calc( var( --base-spacing ) / 2 );
+	margin-top: var( --base-spacing );
+}
+
+.wp-block-sc-recipe__blathering-wrapper {
+	position: relative;
+	height: 100px;
+	max-height: 100px;
+	overflow: hidden;
+}
+
+.wp-block-sc-recipe .overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 25%;
+	width: 100%;
+	background: linear-gradient( to bottom, rgba( var( --gray-100 ), 0.25 ), rgba( var( --gray-100 ), 1 ) );
+	z-index: 10;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.wp-block-sc-recipe svg {
+	height: 16px;
+	width: 16px;
+	stroke: var( --gray-500 );
+	fill: var( --gray-500 );
+	transform: rotate( 0 );
+	transition: transform 300ms ease;
 }
 
 .wp-block-sc-recipe .wp-block-sc-recipe__content ul,
 .wp-block-sc-recipe .wp-block-sc-recipe__content ol {
-	margin: 0 0 0 var( --base-spacing );
+	margin-left: var( --base-spacing );
 }
 
 .wp-block-sc-recipe .wp-block-sc-recipe__title {
+	background-color: transparent;
 	color: var( --pink-600 );
 	font-family: var( --header-font );
 	line-height: 1.2;
 	margin: 0;
+	padding: var( --base-spacing ) calc( var( --base-spacing ) / 2 ) 0;
+	opacity: 0.99;
+	z-index: 5;
+}
+
+.wp-block-sc-recipe .wp-block-sc-recipe__section-title {
+	font-size: 20px;
+}
+
+/*
+.wp-block-sc-recipe .wp-block-sc-recipe__blathering-wrapper {
+	height: 100px;
+	max-height: 100px;
+	overflow: hidden;
+}
+*/
+.wp-block-sc-recipe .wp-block-sc-recipe__blathering {
+	height: 100px;
+	max-height: 100px;
+	overflow: hidden;
 }
